@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual Environments
+/venv/
+/env/
+/ENV/
+.env
+
+# Raw Datasets (ASVspoof 2019 data is ~15GB in root /data/)
+/data/
+/data/**
+
+# Large Intermediate Feature Dumps & Caches (>50MB)
+results/*.npz
+
+# Intermediate Training Checkpoints (Keep only checkpoints/best_model.pt)
+checkpoints/checkpoint_epoch_*.pt
+
+# Upload Caches & Temporary Audio
+demo_samples/temp_upload.wav
+test_*.wav
+test_*.mp3
+external_*
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# OS / Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

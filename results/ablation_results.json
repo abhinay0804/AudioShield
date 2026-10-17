@@ -1,0 +1,32 @@
+{
+  "LFCC + XGBoost Baseline (No DL)": {
+    "Dev_EER": 18.37,
+    "Eval_EER": 35.1085,
+    "min_tdcf": 0.428,
+    "Description": "Static spectral feature aggregation (mean, std, skew, kurtosis)"
+  },
+  "Proposed Dual-Stream Attention (Ours)": {
+    "Dev_EER": 0.98,
+    "Eval_EER": 18.02,
+    "min_tdcf": 0.3725,
+    "Description": "Full model: Fine BiLSTM + Coarse BiLSTM + Dual MHSA + AM-Softmax + SupCon"
+  },
+  "Ablation 1: Fine-Stream Only (No Coarse)": {
+    "Dev_EER": 5.14,
+    "Eval_EER": 25.28,
+    "min_tdcf": 0.5029,
+    "Description": "Only frame-level BiLSTM + 4-Head MHSA (~10ms resolution)"
+  },
+  "Ablation 2: Coarse-Stream Only (No Fine)": {
+    "Dev_EER": 1.21,
+    "Eval_EER": 17.89,
+    "min_tdcf": 0.3693,
+    "Description": "Only segment-level BiLSTM + 2-Head MHSA (~480ms resolution)"
+  },
+  "Ablation 3: No-Attention (Mean Pooling)": {
+    "Dev_EER": 2.09,
+    "Eval_EER": 23.8,
+    "min_tdcf": 0.425,
+    "Description": "Dual-stream CNN-BiLSTM with static average pooling replacing MHSA"
+  }
+}
